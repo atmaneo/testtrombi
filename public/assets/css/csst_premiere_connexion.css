@@ -1,0 +1,102 @@
+*{
+    margin: 00;
+    padding: 00;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    background-color:white;
+}
+
+#titre_p{
+    text-align: center;
+    color: rgb(22, 22, 104);
+    font-size: 2em;
+    
+}
+
+.contactinfo{
+    text-align: center;
+    cursor :pointer;
+    padding:10px;
+}
+.home{
+    margin-left: 70em;
+    cursor :pointer;
+    color:black;
+    font-size: 20px ;
+}
+#contactinfo span text{
+    color:black;
+}
+li{
+    margin-left: 40em;
+    text-align: justify;
+    padding: 5px;
+}
+.droits{
+    text-align: center;
+    font-size: 25px;
+}
+.alignement{                   /* je crée une DIV qui contient une class wrapper, qui elle meme contient mes icones. cette classe wrapper je la mets en position relative    */
+    position: relative;     /* les elements dans mon wrapper ont une position absolute afin de la placer ou je veux au pixel près    */
+    height: 3em;            /* https://www.youtube.com/watch?v=O4RxtLgO5aM*/
+    cursor:pointer;
+    font-size: 20px;
+}   
+.alignement2 .id{
+    position:relative;
+    top:9em;
+    left:18em;
+}   
+.alignement2 .password{
+    position:relative;
+    top:9em;
+    left:30em;
+}       
+.alignement2 .c_password{
+    position:relative;
+    top:11em;
+    left:7em;
+}                      
+.logo {
+    position:absolute;
+    top:00;
+    left:0;
+    height: 100px;
+    width:180px;
+    }
+.icon{
+    position:absolute;
+    right:50px;
+    color: rgb(22, 22, 104);
+}
+.slogan{
+    position:absolute;
+    top:8em;
+}
+header{
+    width:40
+}
+.bouton1{                   /* ICI l'objectif est de pouvoir placer des boutons ou je veux sur l'ecran, ca marche !*/
+    position:absolute;
+    left:52em;
+    top:32em;
+}
+.bouton2{                   /* ICI l'objectif est de pouvoir placer des boutons ou je veux sur l'ecran, ca marche !*/
+    position:absolute;
+    left:30em;
+    top:20em;
+}
+form{
+    height: 25em;
+    width:50em;
+    text-align: center;
+    /**border: 1px solid black;    /* permet d'encadrer le formulaire par une bordure  */  
+}
+.confidentialite{
+    text-align: center;
+    font-size: 13px;
+}
+
+
+
+
