@@ -23,8 +23,7 @@ class RegistrationController extends AbstractController
         UserAuthenticatorInterface $userAuthenticator,
         UsersAuthenticator $authenticator,
         EntityManagerInterface $entityManager
-    ): Response
-    {
+    ): Response {
         $user = new Users();
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
