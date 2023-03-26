@@ -3,7 +3,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>
-			{% block title %}Maison{% endblock %}
+<<<<<<< HEAD
+			{% block title %}{% endblock %}
+=======
+			{% block title %}Maison2{% endblock %}
+>>>>>>> 3e90d6e80801fcee2a3e5e60000f20a7665c4852
 		</title>
 
 		<meta name="viewport" content="width=device-width" , initial-scale="1.0" ">
@@ -11,28 +15,25 @@
 		{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
 
 		<!--  Feuilles de styles -->
-		<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">{% block stylesheets %}{% endblock %} <link
+		rel="stylesheet" href="{{ asset('assets/css/styles.css') }}" defer>
 
-		{% block stylesheets %}{% endblock %} 
 
-		<link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}" defer>
-	
-			
 		<!--   Fichiers js  -->
 
-		<script src="{{ asset('assets/js/bootstrap.bundle..min.js') }}"defer></script>
+		<script src="{{ asset('assets/js/bootstrap.bundle..min.js') }}" defer></script>
 
-			{% block javascripts %}{% endblock %} 
+		{% block javascripts %}{% endblock %}
 
-		<script src ="{{ asset('assets/js/scripts.js') }}"defer ></script>
+		<script src="{{ asset('assets/js/scripts.js') }}" defer></script>
 	</head>
 
-<body>
-	{% include "_partials/_nav.html.twig" %}
+	<body>
+		{% include "_partials/_nav.html.twig" %}
 
-	{% block body %}{% endblock %}
+		{% block body %}{% endblock %}
 
-	{% include "_partials/_footer.html.twig" %}
-</body>
+		{% include "_partials/_footer.html.twig" %}
+	</body>
 
 </html>
