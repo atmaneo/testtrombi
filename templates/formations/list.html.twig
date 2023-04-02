@@ -1,0 +1,30 @@
+{% extends 'base.html.twig'%}
+
+{% block title %}
+	<h1>Liste des élèves de la formation
+		{{ formation.name}}</h1>
+{% endblock %}
+
+{% block body %}
+	<main class="container">
+		<section class="row">
+			<div clas="col-12">
+				<h1>Liste des élèves de la formation
+					{{ formation.name}}</h1>
+			</div>
+			{% for user in users %}
+				<div class="col-3 mb-3">
+					<div class="card h-100">
+						<div class="card-body">
+							<h2 class="card-title">{{user.lastname}}</h2>
+							<p class="card-text">{{user.firstname}}</p>
+							<p class="card-text">{{user.phone}}</p>
+							<p class="card-text">{{user.email}}</p>
+							<a href="#" class="btn btn-primary">Voir les détails</a>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</section>
+	</main>
+{% endblock %}
