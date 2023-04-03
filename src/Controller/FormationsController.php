@@ -13,6 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/formations')]
 class FormationsController extends AbstractController
 {
+
     #[Route('/', name: 'app_formations_index', methods: ['GET'])]
     public function index(FormationsRepository $formationsRepository): Response
     {

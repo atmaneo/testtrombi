@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Users index{% endblock %}
+{% block title %}Liste des élèves{% endblock %}
 
 {% block body %}
-    <h1>Users index</h1>
+    <h1>Liste des élèves</h1>
 
     <table class="table">
         <thead>
@@ -31,17 +31,17 @@
                 <td>{{ user.phone }}</td>
                 <td>{{ user.photo }}</td>
                 <td>
-                    <a href="{{ path('app_users_show', {'id': user.id}) }}">show</a>
-                    <a href="{{ path('app_users_edit', {'id': user.id}) }}">edit</a>
+                    <a href="{{ path('app_users_show', {'id': user.id}) }}">consulter</a>
+                    <a href="{{ path('app_users_edit', {'id': user.id}) }}">modifier</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="9">no records found</td>
+                <td colspan="9">aucun enregistrement trouvé</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_users_new') }}">Create new</a>
+    <a href="{{ path('app_users_new') }}">Créer nouveau</a>
 {% endblock %}

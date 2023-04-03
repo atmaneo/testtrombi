@@ -4,14 +4,24 @@
 {% endblock %}
 
 {% block body %}
-    <main class="container">
-        <section class="row">
-            <div class="col-12"
-                    <h1>Bienvenue sur le trombinoscope de GEFOR !</h1>
-            </div>
-        </section>
-    </main>
-    
-	<button type="submit" class="btn btn-primary">Envoyer</button>
+	<main class="container">
+		<section class="row">
+			<div class="col-12">
+				<h1>Trombinoscope du groupe GEFOR</h1>
+				<p>Bienvenue !</p>
+			</div>
+			{% for formation in formations  %}
+				<div class="col-3">
+					<div class="card h-100">
+						<div class="card-body">
+							<h3 class="card-title">{{ formation.name }}</h3>
+							<a href="{{ path ('eleves_list',{name:formation.name}) }}" class="btn btn-primary">Voir les photos</a>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</section>
+	</main>
+
 
 {% endblock %}
