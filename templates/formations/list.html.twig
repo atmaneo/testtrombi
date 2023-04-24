@@ -18,9 +18,9 @@
 						<div class="card-body">
 							<h2 class="card-title">{{user.lastname}}</h2>
 							<p class="card-text">{{user.firstname}}</p>
-							<p class="card-text">{{user.phone}}</p>
-							<p class="card-text">{{user.email}}</p>
-							<a href="#" class="btn btn-primary">Voir les détails</a>
+							{#<p class="card-text">{{user.phone}}</p>#}
+							{#<p class="card-text">{{user.email}}</p>#}
+							<a href="{{ path('products_details',{"lastname": user.lastname})}}" class="btn btn-primary">Voir les détails</a>
 						</div>
 					</div>
 				</div>
