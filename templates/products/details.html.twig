@@ -10,6 +10,8 @@
 			<div clas="col-12">
 				<h1>{{user.lastname}}
 					{{user.firstname}}</h1>
+				<img src="{{ asset('assets/pictures/-' ~ user.photo|default('anneA.png')) }}">
+
 			</div>
 			<div class="col-6">
 
@@ -20,8 +22,8 @@
 				<p>Prénom : {{user.firstname}}</p>
 				<p>E-mail : {{user.email}}</p>
 				<p>Tél : {{user.phone}}</p>
+
 			</div>
-				<img src="{{ asset('/assets/') ~ user.photo }}" class="img-fluid" alt="photo">
 		</section>
 	</main>
 

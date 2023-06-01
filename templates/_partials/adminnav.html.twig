@@ -1,0 +1,29 @@
+<aside class="col-3 border border-light bg-white p-2">
+    <article class="card mb-3">
+        <div class="card-header">
+            Formations
+        </div>
+        <div class="card-body">
+        <p><a href="{{ path('app_formations_index') }}">Liste des formations (modifier)</a></p>
+        <p><a href="{{ path('app_formations_new') }}">Ajouter une formation</a></p>
+        </div>
+    </article>
+    <article class="card mb-3">
+        <div class="card-header">
+            Stagiaires
+        </div>
+        <div class="card-body">
+            <p><a href="{{ path('app_users_index') }}">Liste des stagiaires (modifier)</a></p>
+            <p><a href="{{ path('app_users_new') }}">Ajouter un stagiaire</a></p>
+        </div>
+    </article>
+    <article class="card mb-3">
+        <div class="card-header">
+            Options
+        </div>
+        <div class="card-body">
+            <p><a href="{{ path('app_options_index') }}">Liste des options (consulter)</a></p>
+        </div>
+    </article>
+
+</aside>
