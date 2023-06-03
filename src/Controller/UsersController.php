@@ -13,10 +13,10 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/users')]
 class UsersController extends AbstractController
 {
-    #[Route('/', name: 'app_users_index', methods: ['GET'])]
+    #[Route('/', name: 'app_users_index', methods: ['GET'])]    // base est l’URL de la page, name est le nom de la route
     public function index(UsersRepository $usersRepository): Response
     {
-        return $this->render('users/index.html.twig', [
+        return $this->render('users/index.html.twig', [ // render est la fonction qui va chercher le fichier TWIG pour l’afficher
             'users' => $usersRepository->findAll(),
         ]);
     }
